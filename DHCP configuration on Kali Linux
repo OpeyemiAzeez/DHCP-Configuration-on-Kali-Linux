@@ -1,0 +1,17 @@
+Overview: I successfully set up and configured the DHCP service on a Kali Linux server running version 2021.1.
+
+DHCP Server Configuration:
+
+To configure the DHCP server, I followed the following steps:
+Installed the DHCP server package using the command: sudo apt-get install isc-dhcp-server
+Configured the DHCP server by editing the /etc/dhcp/dhcpd.conf file. The configuration included setting up the subnet mask, default gateway, DNS server, and lease time.
+Started and enabled the DHCP server service by running the commands: sudo systemctl start isc-dhcp-server and sudo systemctl enable isc-dhcp-server, respectively.
+
+DHCP Client Configuration:
+To test the DHCP server, I configured various DHCP clients, including a Windows 10 virtual machine, a MacBook Pro, and an iPhone, to request an IP address from the DHCP server. I ensured that each client was connected to the network and configured to obtain an IP address automatically.
+
+Challenges Encountered:
+During the setup of the DHCP server, I encountered some challenges that slowed down the process. First, there were issues with configuring the network interface. Specifically, the virtual network adapter on the Kali Linux VM was not configured correctly, resulting in the DHCP server not being able to assign IP addresses. Additionally, there was an issue with the firewall on the Kali Linux VM, which blocked incoming DHCP requests from other devices.
+
+Conclusion:
+Setting up a DHCP server can be a complex process that requires a good understanding of network protocols and configurations. In this exercise, I was able to successfully set up a DHCP server on Kali Linux and configure it to assign IP addresses to different devices on the network. While I faced some challenges, I was able to overcome them by carefully troubleshooting and identifying the root cause of the issues. Overall, this experience taught me a lot about configuring network services and documenting my work for future reference.
